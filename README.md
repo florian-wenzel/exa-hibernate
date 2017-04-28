@@ -31,4 +31,4 @@ To use the dialect, add the two new classes to the build path. In addition, refe
     </persistence-unit>
 </persistence>
 ```
-In this snippet *ip-range*, *port*, *myuser*, and *mypwd* have to be changed to the actual connection parameters of the Exasol database. Also make sure to define a default schema by exchanging *myschema* with your own choice!
+In this snippet *ip-range*, *port*, *myuser*, and *mypwd* have to be changed to the actual connection parameters of the EXASOL database. Also make sure to define a default schema by exchanging *myschema* with your own choice!
