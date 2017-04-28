@@ -1,3 +1,5 @@
+
+
 # Exasol Hibernate Dialect
 
 EXASOL is a high-performance, in-memory, MPP database specifically designed for analytics. This repository contains a custom dialect to support ORM via JPA and Hibernate 5 using the EXASOL database.
@@ -28,7 +30,18 @@ To use the dialect, add the two new classes to the build path. In addition, refe
             <property name="hibernate.default_schema" value="myschema" />
           ...
         </properties>
-    </persistence-unit>
-</persistence>
+...
 ```
 In this snippet *ip-range*, *port*, *myuser*, and *mypwd* have to be changed to the actual connection parameters of the EXASOL database. Also make sure to define a default schema by exchanging *myschema* with your own choice!
+
+If you do not use JPA then reference the dialect in your *hibernate.cfg.xml* file.
+```
+...
+ 	<property name="connection.driver_class">com.exasol.jdbc.EXADriver</property>
+        <property name="connection.url">jdbc:exa:ip-range:port</property>
+        <property name="connection.username">myuser</property>
+        <property name="connection.password">mypwd</property>
+	<property name="dialect">com.exasol.dialect.ExasolDialect</property>
+	<property name="default_schema">myschema</property>
+...
+```
