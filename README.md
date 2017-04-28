@@ -1,5 +1,6 @@
 
 
+
 # Exasol Hibernate Dialect
 
 EXASOL is a high-performance, in-memory, MPP database specifically designed for analytics. This repository contains a custom dialect to support ORM via JPA and Hibernate 5 using the EXASOL database.
@@ -45,3 +46,6 @@ If you do not use JPA then reference the dialect in your *hibernate.cfg.xml* fil
 	<property name="default_schema">myschema</property>
 ...
 ```
+
+## Remarks
+This project provides basic ORM functionality for Hibernate using JPA. Some functionality still needs to be implemented or will not be supported by the EXASOL database.
