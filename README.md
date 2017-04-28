@@ -13,9 +13,9 @@ This dialect is designed for Hibernate 5 and has been tested with hibernate-enti
 
 The repository provides two new classes: 
 - com.exasol.dialect.ExasolDialect as extension of [org.hibernate.dialect.Dialect](http://docs.jboss.org/hibernate/orm/5.0/javadocs/org/hibernate/dialect/Dialect.html)
-- com.exasol.dialect.ExasolIDentitySupport as extension of [org.hibernate.dialect.identity.IdentityColumnSupportImpl](http://docs.jboss.org/hibernate/orm/5.0/javadocs/org/hibernate/dialect/identity/IdentityColumnSupportImpl.html)
+- com.exasol.dialect.ExasolIdentitySupport as extension of [org.hibernate.dialect.identity.IdentityColumnSupportImpl](http://docs.jboss.org/hibernate/orm/5.0/javadocs/org/hibernate/dialect/identity/IdentityColumnSupportImpl.html)
 
-To use the dialect, add those classes to the build path. In addition, reference the dialect as well as the corresponding JDBC driver in *persistence.xml* file.
+To use the dialect, add the two new classes to the build path. In addition, reference the dialect as well as the corresponding JDBC driver in *persistence.xml* file.
 
 ```
 ...
@@ -24,8 +24,8 @@ To use the dialect, add those classes to the build path. In addition, reference 
             <property name="javax.persistence.jdbc.url" value="jdbc:exa:ip-range:port" />
             <property name="javax.persistence.jdbc.user" value="myuser" />
             <property name="javax.persistence.jdbc.password" value="mypwd" />
-			      <property name="hibernate.dialect" value="com.exasol.dialect.ExasolDialect"/>
-		        <property name="hibernate.default_schema" value="myschema" />
+	    <property name="hibernate.dialect" value="com.exasol.dialect.ExasolDialect"/>
+            <property name="hibernate.default_schema" value="myschema" />
           ...
         </properties>
     </persistence-unit>
